@@ -48,6 +48,6 @@ io.on('connection', function (socket) {
 });
 
 
-server.listen(1234, function () {					// had the server start listening on port 1234.
+server.listen(80, function () {					// had the server start listening on port 1234.
   console.log(`Listening on ${server.address().port}`);
 });
