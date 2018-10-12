@@ -79,7 +79,7 @@ const submitName = (e) =>{
   const name = document.querySelector("#nameData").value;
   document.querySelector("#nameData").value = "";
   if(username === ""){
-    if(e.length > 10){
+    if(name.length > 10){
       alert("Please use a short hand name");
     } else {
       socket.emit('name',name);
