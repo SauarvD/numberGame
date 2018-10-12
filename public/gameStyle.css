@@ -1,0 +1,103 @@
+#events{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#nameHolder{
+	visibility: hidden;
+}
+
+.game{
+	display: flex;
+	justify-content: space-around;
+}
+
+#events{
+	border: 1px solid #000;
+	width: 50%;
+	opacity: 0;
+  	animation: revealGame 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.game-rules{
+	width: 40%;
+    font-family: fantasy;
+    line-height: 2em;
+    letter-spacing: 1px;
+    opacity: 0;
+  	animation: revealGameRule 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+.blocks{
+	width: 3em;
+    height: 3em;
+    text-align: center;
+    border: 1px solid;
+    line-height: 3em;
+    cursor: pointer;
+    margin: 1em;
+    border-radius: 0.5em;
+    position: relative;
+    border: 1px solid #ed0295;
+}
+
+.copyright{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 100%;
+    background-color: #ed0295;
+    border-radius: 0.5em;
+    overflow: hidden;
+    border: 1px solid #ed0295;
+}
+
+.color-palette{
+	text-align: center;
+    letter-spacing: 1px;
+    font-family: fantasy;
+    opacity: 0;
+  	animation: revealLogo 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+
+#nameHolder{
+	text-align: center;
+	margin: 1em 0;
+}
+
+@keyframes revealLogo {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes revealGame {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+@keyframes revealGameRule {
+  0% {
+    opacity: 0;
+    transform: translatex(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+
+}
