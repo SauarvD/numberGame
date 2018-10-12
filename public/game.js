@@ -79,7 +79,6 @@ const submitName = (e) =>{
   const name = document.querySelector("#nameData").value;
   document.querySelector("#nameData").value = "";
   if(username === ""){
-    console.log(name);
     if(name.length > 10){
       alert("Please use a short hand name");
     } else {
