@@ -78,8 +78,16 @@ const submitName = (e) =>{
   e.preventDefault();
   const name = document.querySelector("#nameData").value;
   document.querySelector("#nameData").value = "";
-  socket.emit('name',name);
-  username = name;
+  if(username !== ""){
+    if(username.length > 10){
+      alert("Please use a short hand name");
+    } else {
+      socket.emit('name',name);
+      username = name;
+    }
+  } else {
+    alert("You are already in the game");
+  }
 }
 
 makeDivs(30);
